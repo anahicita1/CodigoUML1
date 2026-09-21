@@ -1,0 +1,121 @@
+======================================================================
+ SISTEMA DE GESTION INTEGRAL - ECOTECH SOLUTIONS
+======================================================================
+
+1. ENCABEZADO Y DESCRIPCION
+----------------------------------------------------------------------
+Nombre del sistema: Sistema de Gestion Integral - EcoTech Solutions.
+Stack tecnologico: Python 3.10+, Streamlit, SQLite3.
+
+La aplicacion permite administrar empleados, administradores,
+departamentos, proyectos, registros de tiempo e informes mediante una
+interfaz web y una base de datos SQLite.
+
+2. REQUISITOS PREVIOS
+----------------------------------------------------------------------
+- Tener instalado Python 3.10 o superior.
+- Contar con conexion a internet para la instalacion inicial de librerias.
+
+3. GUIA DE INSTALACION Y EJECUCION PASO A PASO
+----------------------------------------------------------------------
+
+3.1 Abrir la terminal en el directorio del proyecto
+
+Windows PowerShell:
+    cd C:\ruta\al\proyecto\CodigoUML1
+
+Mac/Linux:
+    cd /ruta/al/proyecto/CodigoUML1
+
+Si los archivos app.py y main.py estan dentro de la subcarpeta
+CodigoUML1, entrar primero en ella:
+    cd CodigoUML1
+
+3.2 Crear el entorno virtual local
+
+    python -m venv venv
+
+3.3 Activar el entorno virtual
+
+Windows PowerShell:
+    .\venv\Scripts\activate
+
+Mac/Linux:
+    source venv/bin/activate
+
+3.4 Instalar las librerias
+
+    pip install -r requirements.txt
+
+3.5 Iniciar la interfaz web
+
+Si la terminal ya esta dentro de la carpeta que contiene app.py:
+    streamlit run app.py
+
+Si se parte desde la raiz y los archivos estan en una subcarpeta:
+    cd CodigoUML1
+    streamlit run app.py
+
+3.6 Abrir la aplicacion
+
+URL de acceso:
+    http://localhost:8501
+
+4. ESTRUCTURA DEL ENTREGABLE
+----------------------------------------------------------------------
+
+app.py
+    Interfaz web Streamlit. Contiene la navegacion por modulos,
+    formularios CRUD, validaciones, mensajes de error y consultas a
+    la base de datos.
+
+main.py
+    Script principal de demostracion y funciones CRUD de consola para
+    las entidades del sistema.
+
+ecotech.db
+    Base de datos SQLite. Contiene las tablas y, si se entrega junto
+    con el proyecto, los datos de prueba iniciales.
+
+modelos/
+    Clases del dominio orientado a objetos: Usuario, Empleado,
+    Administrador, Departamento, Proyecto, RegistroTiempo e Informe.
+
+base_datos/
+    Modulo de conexion, creacion y migracion de las tablas SQLite.
+
+servicios/
+    Servicios externos del sistema. El modulo indicadores.py consulta
+    el valor del dolar en mindicador.cl usando requests, timeout de 5
+    segundos y manejo de errores de red.
+
+requirements.txt
+    Archivo de dependencias Python utilizado para instalar Streamlit,
+    requests y las librerias necesarias.
+
+REPORTE_SISTEMA_ECOTECH.md
+    Documentacion consolidada del diagnostico, las mejoras realizadas,
+    la arquitectura final y la estructura de la base de datos.
+
+Nota tecnica sobre venv
+    La carpeta venv fue omitida intencionalmente de la entrega siguiendo
+    los estandares de la industria. Los entornos virtuales pueden contener
+    rutas absolutas del equipo donde fueron creados. Omitirla evita rutas
+    rotas y permite que el entorno se genere limpiamente en el equipo del
+    evaluador mediante el comando:
+    python -m venv venv
+
+5. NOTAS DE EVALUACION
+----------------------------------------------------------------------
+
+La base de datos ecotech.db se adjunta preconfigurada con datos de
+prueba iniciales de Empleados, Proyectos y Departamentos cuando esos
+datos esten disponibles en la copia entregada.
+
+La aplicacion activa las claves foraneas de SQLite y contiene manejo
+defensivo de errores para evitar que fallos de consultas o formularios
+detengan el servidor de Streamlit.
+
+======================================================================
+ FIN DE LAS INSTRUCCIONES
+======================================================================

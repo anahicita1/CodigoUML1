@@ -1,0 +1,31 @@
+# Variables de entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Bases de datos locales
+*.db
+*.sqlite3
+*.sqlite
+
+# Entornos virtuales
+.venv/
+venv/
+
+# Archivos generados por Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Herramientas de desarrollo
+.vscode/
+.idea/
+
+# Logs y archivos temporales
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Artefactos de distribución
+*.zip
