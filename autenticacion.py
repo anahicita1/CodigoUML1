@@ -4,6 +4,8 @@ import hashlib
 import hmac
 import os
 import secrets
+import sqlite3
+from pathlib import Path
 
 
 class Autenticacion:

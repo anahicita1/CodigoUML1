@@ -99,7 +99,7 @@ REPORTE_SISTEMA_ECOTECH.md
 
 Nota tecnica sobre venv
     La carpeta venv fue omitida intencionalmente de la entrega siguiendo
-    los estandares de la industria. Los entornos virtuales pueden contener
+    los estándares de la industria. Los entornos virtuales pueden contener
     rutas absolutas del equipo donde fueron creados. Omitirla evita rutas
     rotas y permite que el entorno se genere limpiamente en el equipo del
     evaluador mediante el comando:

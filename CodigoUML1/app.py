@@ -7,9 +7,6 @@ import sqlite3
 
 import pandas as pd
 import streamlit as st
-# Desbloqueo temporal de sesión
-st.session_state["autenticado"] = True
-st.session_state["rol"] = "Administrador"
 from dotenv import load_dotenv
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
